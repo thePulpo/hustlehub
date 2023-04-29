@@ -28,7 +28,7 @@
         "docker"
       ],
       "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/keycloak.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/29/Keycloak_Logo.png",
       "image": "jboss/keycloak:15.0.2",
       "ports": [
         "8080/tcp"
