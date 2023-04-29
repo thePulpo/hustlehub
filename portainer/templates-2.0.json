@@ -47,13 +47,13 @@
       "network": null,
       "volumes": [],
       "ports": [
-        "8080:8080/tcp"
+        "keycloak:8080:8080/tcp"
       ],
       "labels": [],
       "privileged": null,
       "interactive": null,
       "restart_policy": "always",
-      "hostname": "keycloak",
+      "hostname": null,
       "note": null,
       "platform": "linux",
       "categories": [
