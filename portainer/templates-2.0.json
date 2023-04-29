@@ -1,0 +1,47 @@
+{
+    "version": "2",
+    "title": "Keycloak",
+    "description": "Keycloak authentication and authorization server",
+    "categories": [
+        "Authentication"
+    ],
+    "logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
+    "note": "The Keycloak server requires at least 2GB of memory to run.",
+    "platforms": [
+        "linux/amd64"
+    ],
+    "env": {
+        "KEYCLOAK_USER": {
+            "type": "string",
+            "title": "Admin Username",
+            "description": "Username for the Keycloak admin account",
+            "default": "admin"
+        },
+        "KEYCLOAK_PASSWORD": {
+            "type": "string",
+            "title": "Admin Password",
+            "description": "Password for the Keycloak admin account",
+            "default": "admin"
+        }
+    },
+    "services": [
+        {
+            "type": "container",
+            "image": "jboss/keycloak:latest",
+            "name": "keycloak",
+            "volumes": [],
+            "ports": [
+                "8080:8080"
+            ],
+            "environment": [
+                "KEYCLOAK_USER={{KEYCLOAK_USER}}",
+                "KEYCLOAK_PASSWORD={{KEYCLOAK_PASSWORD}}"
+            ],
+            "labels": {},
+            "command": null
+        }
+    ],
+    "volumes": [],
+    "networks": [],
+    "healthcheck": null
+}
