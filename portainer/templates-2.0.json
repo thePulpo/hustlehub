@@ -23,6 +23,7 @@
     {
       "type": 1,
       "title": "Keycloak",
+      "name": "test",
       "description": "Identity and Access Management solution",
       "categories": [
         "docker"
