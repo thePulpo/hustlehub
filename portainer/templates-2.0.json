@@ -24,30 +24,46 @@
       "type": 1,
       "title": "Keycloak",
       "description": "Identity and Access Management solution",
-      "categories": [
-        "docker"
-      ],
-      "platform": "linux",
-      "logo": "https://github.com/thePulpo/hustlehub/raw/templates/portainer/logos/keycloak.png",
       "image": "jboss/keycloak:15.0.2",
-      "ports": [
-        "8080:8080/tcp"
-      ],
+      "administrators-only": null,
       "name": "keycloak",
+      "logo": "https://github.com/thePulpo/hustlehub/raw/templates/portainer/logos/keycloak.png",
+      "registry": null,
+      "command": null,
       "env": [
         {
           "name": "KEYCLOAK_USER",
           "label": "Keycloak Admin Username",
-          "default": "admin",
-          "type": "string"
+          "description": "The admin username for Keycloak",
+          "default": "admin"
         },
         {
           "name": "KEYCLOAK_PASSWORD",
           "label": "Keycloak Admin Password",
-          "default": "admin",
-          "type": "password"
+          "description": "The admin password for Keycloak",
+          "default": "admin"
         }
+      ],
+      "network": null,
+      "volumes": [],
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "labels": [],
+      "privileged": null,
+      "interactive": null,
+      "restart_policy": "always",
+      "hostname": "",
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker"
       ]
+    },
+    {
+      "type": 1,
+      "title": "Keycloak",
+      "description": "Identity and Access Management solution"
     }
   ]
 }
