@@ -36,14 +36,14 @@
       "env": [
         {
           "name": "KEYCLOAK_USER",
-          "title": "Keycloak Admin Username",
+          "label": "Keycloak Admin Username",
           "description": "The admin username for Keycloak",
           "default": "admin",
           "type": "string"
         },
         {
           "name": "KEYCLOAK_PASSWORD",
-          "title": "Keycloak Admin Password",
+          "label": "Keycloak Admin Password",
           "description": "The admin password for Keycloak",
           "default": "admin",
           "type": "password"
