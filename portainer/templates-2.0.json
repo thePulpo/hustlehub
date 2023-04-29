@@ -53,7 +53,7 @@
       "privileged": null,
       "interactive": null,
       "restart_policy": "always",
-      "hostname": "",
+      "hostname": "keycloak",
       "note": null,
       "platform": "linux",
       "categories": [
