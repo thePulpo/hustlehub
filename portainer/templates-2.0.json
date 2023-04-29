@@ -2,7 +2,7 @@
   "version": "2",
   "templates": [
     {
-      "type": "* (Integer) The template type. 1 = container; 2 = Swarm stack; 3 = Compose stack",
+      "type": "1",
       "title": "* (String) The template title.",
       "description": "* (String) The template description.",
       "image": "* (String) The Docker image associated with a template.",
