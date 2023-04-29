@@ -33,7 +33,7 @@
       "ports": [
         "8080:8080/tcp"
       ],
-      "name": "test",
+      "name": "keycloak",
       "env": [
         {
           "name": "KEYCLOAK_USER",
