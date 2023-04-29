@@ -2,22 +2,53 @@
   "version": "2",
   "templates": [
     {
-      "type": 1,
-      "title": "Registry",
-      "description": "Docker image registry",
-      "categories": [
-        "docker"
+      "type": "* (Integer) The template type. 1 = container; 2 = Swarm stack; 3 = Compose stack",
+      "title": "* (String) The template title.",
+      "description": "* (String) The template description.",
+      "image": "* (String) The Docker image associated with a template.",
+      "administrators-only": "(Boolean) Indicates whether or not a template should be available just to admin users.",
+      "name": "(String) The default name of a template (shows in the Portainer UI).",
+      "logo": "(String) The template logo. <https://the.template/logo.png>",
+      "registry": "(String) The registry where the Docker image is stored. If not specified, Portainer will use Docker Hub as the default.",
+      "command": "(String) The command to run in the container. If not specified, the container will use the default command in its Dockerfile.",
+      "env": [
+        {
+          "name": "the name of the environment variable, as supported in the container image (mandatory)",
+          "label": "label for the input in the UI (mandatory unless set is present)",
+          "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
+          "default": "default value associated to the variable (optional)",
+          "preset": "boolean. If set to true, the UI will not generate an input (optional)",
+          "select": "an array of possible values, will generate a select input (optional)"
+        }
       ],
-      "platform": "linux",
-      "logo": "https://github.com/thePulpo/hustlehub/raw/templates/portainer/logos/docker.png",
-      "image": "registry:latest",
-      "ports": [
-        "5000/tcp"
-      ],
+      "network": "(String) A string that corresponds to the name of an existing Docker network. Will auto-select the network in the templates view.",
       "volumes": [
         {
-          "container": "/var/lib/registry"
+          "container": "/path/on/container",
+          "bind": "/path/ont/host",
+          "readonly": true
         }
+      ],
+      "ports": [
+        "<host_port>:<container_port>/<protocol>"
+      ],
+      "labels": [
+        {
+          "name": "com.example.vendor",
+          "value": "Acme"
+        }
+      ],
+      "privileged": "(Boolean) Indicates whether or not the container should be started in privileged mode. Defaults to false if not specified.",
+      "interactive": "(Boolean) Indicates whether or not the container should be started in foreground mode. Defaults to false if not specified.",
+      "restart_policy": "(String) The restart policy associated with the container. Will default to \"always\" if no value is specified.",
+      "hostname": "(String) The hostname of the container. Will default to Docker if not specified.",
+      "note": "(String) Extra information about a template, for example what it is used for. Displayed inside the template-creation form in the Portainer UI. Supports HTML.",
+      "platform": "linux or windows",
+      "categories": [
+        "An array of categories associated with a template. Populates the category filter in the Portainer UI.",
+        "docker",
+        "webserver",
+        "open-source"
       ]
     },
     {
@@ -59,11 +90,6 @@
       "categories": [
         "docker"
       ]
-    },
-    {
-      "type": 1,
-      "title": "Keycloak",
-      "description": "Identity and Access Management solution"
     }
   ]
 }
