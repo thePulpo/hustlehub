@@ -1,47 +1,54 @@
 {
-    "version": "2",
-    "title": "Keycloak",
-    "description": "Keycloak authentication and authorization server",
-    "categories": [
-        "Authentication"
-    ],
-    "logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
-    "note": "The Keycloak server requires at least 2GB of memory to run.",
-    "platforms": [
-        "linux/amd64"
-    ],
-    "env": {
-        "KEYCLOAK_USER": {
-            "type": "string",
-            "title": "Admin Username",
-            "description": "Username for the Keycloak admin account",
-            "default": "admin"
-        },
-        "KEYCLOAK_PASSWORD": {
-            "type": "string",
-            "title": "Admin Password",
-            "description": "Password for the Keycloak admin account",
-            "default": "admin"
-        }
-    },
-    "services": [
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "Registry",
+      "description": "Docker image registry",
+      "categories": [
+        "docker"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+      "image": "registry:latest",
+      "ports": [
+        "5000/tcp"
+      ],
+      "volumes": [
         {
-            "type": "container",
-            "image": "jboss/keycloak:latest",
-            "name": "keycloak",
-            "volumes": [],
-            "ports": [
-                "8080:8080"
-            ],
-            "environment": [
-                "KEYCLOAK_USER={{KEYCLOAK_USER}}",
-                "KEYCLOAK_PASSWORD={{KEYCLOAK_PASSWORD}}"
-            ],
-            "labels": {},
-            "command": null
+          "container": "/var/lib/registry"
         }
-    ],
-    "volumes": [],
-    "networks": [],
-    "healthcheck": null
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Keycloak",
+      "description": "Identity and Access Management solution",
+      "categories": [
+        "docker"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/keycloak.png",
+      "image": "jboss/keycloak:15.0.2",
+      "ports": [
+        "8080/tcp"
+      ],
+      "env": [
+        {
+          "name": "KEYCLOAK_USER",
+          "title": "Keycloak Admin Username",
+          "description": "The admin username for Keycloak",
+          "default": "admin",
+          "type": "string"
+        },
+        {
+          "name": "KEYCLOAK_PASSWORD",
+          "title": "Keycloak Admin Password",
+          "description": "The admin password for Keycloak",
+          "default": "admin",
+          "type": "password"
+        }
+      ]
+    }
+  ]
 }
