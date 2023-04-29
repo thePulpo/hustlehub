@@ -21,7 +21,7 @@
       ]
     },
     {
-      "type": 3,
+      "type": 1,
       "title": "Keycloak",
       "description": "Identity and Access Management solution",
       "categories": [
