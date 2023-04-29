@@ -37,12 +37,14 @@
         {
           "name": "KEYCLOAK_USER",
           "label": "Keycloak Admin Username",
-          "default": "admin"
+          "default": "admin",
+          "type": "string"
         },
         {
           "name": "KEYCLOAK_PASSWORD",
           "label": "Keycloak Admin Password",
-          "default": "admin"
+          "default": "admin",
+          "type": "password"
         }
       ]
     }
