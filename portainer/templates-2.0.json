@@ -21,7 +21,7 @@
       ]
     },
     {
-      "type": 1,
+      "type": 3,
       "title": "Keycloak",
       "description": "Identity and Access Management solution",
       "categories": [
@@ -31,7 +31,7 @@
       "logo": "https://github.com/thePulpo/hustlehub/raw/templates/portainer/logos/keycloak.png",
       "image": "jboss/keycloak:15.0.2",
       "ports": [
-        "8080/tcp"
+        "8080:8080/tcp"
       ],
       "env": [
         {
