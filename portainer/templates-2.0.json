@@ -9,7 +9,7 @@
         "docker"
       ],
       "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+      "logo": "https://github.com/thePulpo/hustlehub/raw/templates/portainer/logos/docker.png",
       "image": "registry:latest",
       "ports": [
         "5000/tcp"
