@@ -47,7 +47,7 @@
       "network": null,
       "volumes": [],
       "ports": [
-        "keycloak:8080:8080/tcp"
+        "::8080/tcp"
       ],
       "labels": [],
       "privileged": null,
