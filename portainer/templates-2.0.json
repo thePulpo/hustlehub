@@ -38,7 +38,8 @@
       "note": null,
       "platform": "linux",
       "categories": [
-        "docker"
+        "docker",
+        "open-source"
       ]
     },
     {
@@ -82,44 +83,87 @@
       ]
     },
     {
-      "type": 1,
+      "type": "3",
       "title": "Nextcloud",
-      "description": "DNS filtering and ad-blocking software",
-      "image": "adguard/adguardhome:latest",
+      "description": "Secure collaborative cloud storage platform",
+      "repository": {
+        "url": "URL of the public git repository (mandatory)",
+        "stackfile": "Path to the Compose file inside the repository (mandatory)"
+      },
       "administrators-only": null,
-      "name": "adguard",
+      "name": "nextcloud",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg",
-      "registry": null,
-      "command": null,
       "env": [],
-      "network": null,
-      "volumes": [],
-      "ports": [
-        "53:53/tcp",
-        "53:53/udp",
-        "67:67/udp",
-        "6868:68/udp",
-        "80:80/tcp",
-        "443:443/tcp",
-        "443:443/udp",
-        "3000:3000/tcp",
-        "853:853/tcp",
-        "784:784/udp",
-        "853:853/udp",
-        "8853:8853/udp",
-        "5443:5443/tcp",
-        "5443:5443/udp"
-      ],
-      "labels": [],
-      "privileged": null,
-      "interactive": null,
-      "restart_policy": "always",
-      "hostname": null,
       "note": null,
       "platform": "linux",
       "categories": [
-        "docker"
+        "docker",
+        "open-source"
       ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "command": "",
+      "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "USERID",
+          "name": "USERID"
+        },
+        {
+          "default": "1000",
+          "label": "GROUPID",
+          "name": "GROUPID"
+        },
+        {
+          "default": "guest;guest",
+          "label": "USER",
+          "name": "USER"
+        },
+        {
+          "default": "true",
+          "label": "PERMISSIONS",
+          "name": "PERMISSIONS"
+        },
+        {
+          "default": "portainer;/share;yes;no;yes;guest",
+          "label": "SHARE",
+          "name": "SHARE"
+        }
+      ],
+      "image": "dperson/samba:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/samba.png",
+      "name": "Samba",
+      "platform": "linux",
+      "ports": [
+        "139:139/tcp",
+        "445:445/tcp"
+      ],
+      "privileged": true,
+      "restart_policy": "unless-stopped",
+      "title": "Samba",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/share"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.samba.org/\" target=\"_blank\">https://www.samba.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/dperson/samba\" target=\"_blank\">https://github.com/dperson/samba</a><br><br><br><b>Youtube Videos:</b><br><ul><li><a href=https://www.youtube.com/watch?v=2zZ3_1GRWrM&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=11 target=\"_blank\">Novaspirit Tech - Setting up Raspberry Pi Samba Server For File Sharing on Docker</a></li><li><a href=https://www.youtube.com/watch?v=9ln6UFH4z8o target=\"_blank\">Novaspirit Tech - Building NAS with Container</a></li></ul><br><br>"
     },
     {
       "type": 1,
