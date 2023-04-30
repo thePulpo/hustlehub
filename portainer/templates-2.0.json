@@ -102,12 +102,15 @@
       ]
     },
     {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
+      "type": 1,
+      "title": "Samba",
+      "description": "File and print sharing software.",
+      "image": "dperson/samba:latest",
+      "administrators-only": null,
+      "name": "samba",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_Samba_Software.svg",
+      "registry": null,
       "command": null,
-      "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
       "env": [
         {
           "default": "1000",
@@ -145,25 +148,27 @@
           "name": "SHARE"
         }
       ],
-      "image": "dperson/samba:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/samba.png",
-      "name": "Samba",
-      "platform": "linux",
+      "network": null,
+      "volumes": [
+        {
+          "bind": "/share",
+          "container": "/share"
+        }
+      ],
       "ports": [
         "139:139/tcp",
         "445:445/tcp"
       ],
+      "labels": [],
       "privileged": true,
+      "interactive": null,
       "restart_policy": "unless-stopped",
-      "title": "Samba",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/share"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.samba.org/\" target=\"_blank\">https://www.samba.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/dperson/samba\" target=\"_blank\">https://github.com/dperson/samba</a><br><br><br><b>Youtube Videos:</b><br><ul><li><a href=https://www.youtube.com/watch?v=2zZ3_1GRWrM&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=11 target=\"_blank\">Novaspirit Tech - Setting up Raspberry Pi Samba Server For File Sharing on Docker</a></li><li><a href=https://www.youtube.com/watch?v=9ln6UFH4z8o target=\"_blank\">Novaspirit Tech - Building NAS with Container</a></li></ul><br><br>"
+      "hostname": null,
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker"
+      ]
     },
     {
       "type": 1,
