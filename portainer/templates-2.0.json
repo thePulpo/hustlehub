@@ -88,7 +88,7 @@
       "description": "Secure collaborative cloud storage platform",
       "repository": {
         "url": "https://github.com/thePulpo/hustlehub/tree/templates",
-        "stackfile": "docker-compose/nextcloud.yml"
+        "stackfile": "portainer/docker-compose/nextcloud.yml"
       },
       "administrators-only": null,
       "name": "nextcloud",
