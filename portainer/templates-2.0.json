@@ -87,8 +87,8 @@
       "title": "Nextcloud",
       "description": "Secure collaborative cloud storage platform",
       "repository": {
-        "url": "URL of the public git repository (mandatory)",
-        "stackfile": "Path to the Compose file inside the repository (mandatory)"
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "docker-compose/nextcloud.yml"
       },
       "administrators-only": null,
       "name": "nextcloud",
