@@ -113,6 +113,16 @@
       "command": null,
       "env": [
         {
+          "default": "1000",
+          "label": "USERID",
+          "name": "USERID"
+        },
+        {
+          "default": "1000",
+          "label": "GROUPID",
+          "name": "GROUPID"
+        },
+        {
           "default": "guest;guest",
           "label": "USER",
           "name": "USER"
