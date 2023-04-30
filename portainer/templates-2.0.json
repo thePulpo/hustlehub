@@ -83,11 +83,30 @@
       ]
     },
     {
+      "type": "3",
+      "title": "Nextcloud",
+      "description": "Secure collaborative cloud storage platform",
+      "repository": {
+        "url": "URL of the public git repository (mandatory)",
+        "stackfile": "Path to the Compose file inside the repository (mandatory)"
+      },
+      "administrators-only": null,
+      "name": "nextcloud",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
+    },
+    {
       "categories": [
         "Other",
         "Tools"
       ],
-      "command": "",
+      "command": null,
       "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
       "env": [
         {
