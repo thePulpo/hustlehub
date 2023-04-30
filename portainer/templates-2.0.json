@@ -104,7 +104,7 @@
     {
       "type": 1,
       "title": "Samba",
-      "description": "File and print sharing software.",
+      "description": "File and print sharing software",
       "image": "dperson/samba:latest",
       "administrators-only": null,
       "name": "samba",
@@ -112,26 +112,6 @@
       "registry": null,
       "command": null,
       "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "USERID",
-          "name": "USERID"
-        },
-        {
-          "default": "1000",
-          "label": "GROUPID",
-          "name": "GROUPID"
-        },
         {
           "default": "guest;guest",
           "label": "USER",
@@ -173,8 +153,8 @@
     },
     {
       "type": 1,
-      "title": "Jupyter",
-      "description": "DNS filtering and ad-blocking software",
+      "title": "JupyterHub",
+      "description": "Multi-user Jupyter Notebook server",
       "image": "adguard/adguardhome:latest",
       "administrators-only": null,
       "name": "adguard",
@@ -215,7 +195,7 @@
     {
       "type": 1,
       "title": "Bitwarden",
-      "description": "DNS filtering and ad-blocking software",
+      "description": "Password manager solution",
       "image": "adguard/adguardhome:latest",
       "administrators-only": null,
       "name": "adguard",
