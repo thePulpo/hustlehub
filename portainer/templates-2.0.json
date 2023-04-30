@@ -87,7 +87,7 @@
       "title": "Nextcloud",
       "description": "Secure collaborative cloud storage platform",
       "repository": {
-        "url": "https://github.com/thePulpo/hustlehub/blob/templates",
+        "url": "https://github.com/thePulpo/hustlehub",
         "stackfile": "portainer/docker-compose/nextcloud.yml"
       },
       "administrators-only": null,
