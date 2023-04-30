@@ -167,7 +167,8 @@
       "note": null,
       "platform": "linux",
       "categories": [
-        "docker"
+        "docker",
+        "open-source"
       ]
     },
     {
@@ -207,7 +208,8 @@
       "note": null,
       "platform": "linux",
       "categories": [
-        "docker"
+        "docker",
+        "open-source"
       ]
     },
     {
@@ -247,7 +249,8 @@
       "note": null,
       "platform": "linux",
       "categories": [
-        "docker"
+        "docker",
+        "open-source"
       ]
     }
   ]
