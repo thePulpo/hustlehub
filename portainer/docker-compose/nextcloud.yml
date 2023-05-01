@@ -7,7 +7,7 @@ volumes:
     driver: local
     driver_opts:
       type: cifs
-      device: //keycloak/nextcloud
+      device: //keycloak/portainer/nextcloud
       o: addr=keycloak,username=zu,password=zu,file_mode=0777,dir_mode=0777
   db:
 
@@ -26,6 +26,7 @@ services:
 
   app:
     image: nextcloud
+    privileged: true
     restart: always
     ports:
       - 8080:80
