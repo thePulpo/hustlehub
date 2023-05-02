@@ -232,6 +232,25 @@
         "docker",
         "open-source"
       ]
+    },
+    {
+      "type": 3,
+      "title": "NGINX Proxy Manager",
+      "description": "Proxy Manager to expose your services easily and securely",
+      "repository": {
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/docker-compose/npm.yml"
+      },
+      "administrators-only": null,
+      "name": "nextcloud",
+      "logo": "https://avatars.githubusercontent.com/u/88089605?s=200&v=4",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
     }
   ]
 }
