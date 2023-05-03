@@ -242,7 +242,7 @@
         "stackfile": "portainer/docker-compose/npm.yml"
       },
       "administrators-only": null,
-      "name": "nextcloud",
+      "name": "nginx-proxy-manager",
       "logo": "https://avatars.githubusercontent.com/u/88089605?s=200&v=4",
       "env": [],
       "note": null,
