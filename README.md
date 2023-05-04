@@ -15,3 +15,11 @@ The entire system is designed to be as secure as possible, with regular updates 
 vulnerabilities. HustleHub is a comprehensive product, intended for educational purposes, and provides an all-in-one
 solution for learning about secure server systems and experimenting with different technologies in a safe and controlled
 environment.
+
+# Nextcloud
+
+use docker compose
+
+## Connect to Keycloak (OpenID)
+
+https://www.schiessle.org/articles/2020/07/26/nextcloud-and-openid-connect/
