@@ -107,7 +107,7 @@
       "description": "Secure collaborative cloud storage platform",
       "repository": {
         "url": "https://github.com/nextcloud/docker",
-        "stackfile": "docker-compose/insecure/mariadb/fpm/docker-compose.yml"
+        "stackfile": ".examples/docker-compose/insecure/mariadb/fpm/docker-compose.yml"
       },
       "administrators-only": null,
       "name": "nextcloud",
