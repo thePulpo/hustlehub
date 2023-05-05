@@ -22,4 +22,4 @@ use docker compose
 
 ## Connect to Keycloak (OpenID)
 
-https://www.schiessle.org/articles/2020/07/26/nextcloud-and-openid-connect/
+https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
