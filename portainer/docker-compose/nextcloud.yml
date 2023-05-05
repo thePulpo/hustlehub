@@ -25,7 +25,7 @@ services:
     volumes:
       - nextcloud:/var/www/html:z
     environment:
-      - TRUSTED_DOMAINS=nextcloud nextcloud.pulpo.tk
+#      - TRUSTED_DOMAINS=nextcloud nextcloud.pulpo.tk
       - VIRTUAL_HOST=nextcloud.local
       - LETSENCRYPT_HOST=nextcloud.pulpo.tk
       - LETSENCRYPT_EMAIL=pulpo.server@proton.me
