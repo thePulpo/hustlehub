@@ -93,7 +93,40 @@
       "administrators-only": null,
       "name": "nextcloud",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg",
-      "env": [],
+      "env": [
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "MYSQL_ROOT_PASSWORD",
+          "description": "Password for the root user of the database",
+          "default": "nextcloud",
+          "preset": null,
+          "select": null
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "label": "MYSQL_PASSWORD",
+          "description": "Password for the nextcloud user of the database",
+          "default": "nextcloud",
+          "preset": null,
+          "select": null
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "label": "MYSQL_DATABASE",
+          "description": "Name of the database",
+          "default": "nextcloud",
+          "preset": null,
+          "select": null
+        },
+        {
+          "name": "MYSQL_USER",
+          "label": "MYSQL_USER",
+          "description": "Username for the nextcloud user of the database",
+          "default": "nextcloud",
+          "preset": null,
+          "select": null
+        }
+      ],
       "note": null,
       "platform": "linux",
       "categories": [
