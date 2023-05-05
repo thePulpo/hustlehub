@@ -103,11 +103,11 @@
     },
     {
       "type": 3,
-      "title": "Nextcloud insecure nginx",
+      "title": "Nextcloud SSL",
       "description": "Secure collaborative cloud storage platform",
       "repository": {
-        "url": "https://github.com/nextcloud/docker",
-        "stackfile": ".examples/docker-compose/insecure/mariadb/fpm/docker-compose.yml"
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/docker-compose/nextcloud_ssl.yml"
       },
       "administrators-only": null,
       "name": "nextcloud",
