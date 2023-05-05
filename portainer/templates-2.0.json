@@ -102,6 +102,25 @@
       ]
     },
     {
+      "type": 3,
+      "title": "Nextcloud insecure nginx",
+      "description": "Secure collaborative cloud storage platform",
+      "repository": {
+        "url": "https://github.com/nextcloud/docker",
+        "stackfile": "docker-compose/insecure/mariadb/fpm/docker-compose.yml"
+      },
+      "administrators-only": null,
+      "name": "nextcloud",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
+    },
+    {
       "type": 1,
       "title": "Samba",
       "description": "File and print sharing software",
