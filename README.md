@@ -16,10 +16,19 @@ vulnerabilities. HustleHub is a comprehensive product, intended for educational 
 solution for learning about secure server systems and experimenting with different technologies in a safe and controlled
 environment.
 
+# Proxmox
+## Connect to Keycloak (OpenID)
+
+https://gist.github.com/jakoberpf/d6f519459f7dad3b30f509facdc22445
+
+# Portainer
+## Connect to Keycloak (OpenID)
+
+Token Claim Name preferred_username
 # Nextcloud
 
-use docker compose
-
+use docker compose (no ssl, since we will use nginx proxy manager)
+http://nextcloud:8080/login?clear=1
 ## Connect to Keycloak (OpenID)
 
 https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
