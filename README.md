@@ -25,6 +25,7 @@ https://gist.github.com/jakoberpf/d6f519459f7dad3b30f509facdc22445
 ## Connect to Keycloak (OpenID)
 
 Token Claim Name preferred_username
+
 # Nextcloud
 
 use docker compose (no ssl, since we will use nginx proxy manager)
@@ -32,3 +33,9 @@ http://nextcloud:8080/login?clear=1
 ## Connect to Keycloak (OpenID)
 
 https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
+
+# Jupyterhub
+
+
+
+## Connect to Keycloak (OpenID)

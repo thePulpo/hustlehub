@@ -204,8 +204,27 @@
       ]
     },
     {
-      "type": 1,
+      "type": 3,
       "title": "JupyterHub",
+      "description": "Multi-user Jupyter Notebook server",
+      "repository": {
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/jupyterhub/docker-compose.yml"
+      },
+      "administrators-only": null,
+      "name": "jupyterhub",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
+    },
+    {
+      "type": 1,
+      "title": "JupyterHubNo",
       "description": "Multi-user Jupyter Notebook server",
       "image": "adguard/adguardhome:latest",
       "administrators-only": null,
