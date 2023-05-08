@@ -8,7 +8,7 @@ services:
   hub:
     build:
       context: https://github.com/thePulpo/hustlehub.git:portainer/jupyterhub
-      dockerfile: Dockerfile.jupyterhub
+      dockerfile: Dockerfile
 #      args:
 #        JUPYTERHUB_VERSION: latest
     restart: always
