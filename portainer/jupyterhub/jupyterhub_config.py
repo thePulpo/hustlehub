@@ -60,17 +60,39 @@ c.JupyterHub.db_url = "sqlite:////data/jupyterhub.sqlite"
 # Allow anyone to sign-up without approval
 # c.NativeAuthenticator.open_signup = True
 
-c.JupyterHub.authenticator_class = 'oauthenticator.generic.GenericOAuthenticator'
+# c.JupyterHub.authenticator_class = 'oauthenticator.generic.GenericOAuthenticator'
+# c.GenericOAuthenticator.client_id = 'jupyterhub'
+# c.GenericOAuthenticator.client_secret = '810cbb54-a33c-4ec5-b24c-ce61c06d0070'
+# c.GenericOAuthenticator.oauth_callback_url = 'https://your-jupyterhub-domain/hub/oauth_callback'
+# c.GenericOAuthenticator.authorize_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/auth'
+# c.GenericOAuthenticator.token_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/token'
+# c.GenericOAuthenticator.userdata_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/userinfo'
+# c.GenericOAuthenticator.login_service = 'keycloak'
+# c.GenericOAuthenticator.username_key = 'preferred_username'
+# c.GenericOAuthenticator.userdata_params = {'state': 'state'}
+
+
+from oauthenticator.generic import GenericOAuthenticator
+
+c.Application.log_level = 'DEBUG'
+
+c.JupyterHub.authenticator_class = GenericOAuthenticator
 c.GenericOAuthenticator.client_id = 'jupyterhub'
 c.GenericOAuthenticator.client_secret = '810cbb54-a33c-4ec5-b24c-ce61c06d0070'
-c.GenericOAuthenticator.oauth_callback_url = 'https://your-jupyterhub-domain/hub/oauth_callback'
-c.GenericOAuthenticator.authorize_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/auth'
 c.GenericOAuthenticator.token_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/token'
 c.GenericOAuthenticator.userdata_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/userinfo'
-c.GenericOAuthenticator.login_service = 'keycloak'
-c.GenericOAuthenticator.username_key = 'preferred_username'
 c.GenericOAuthenticator.userdata_params = {'state': 'state'}
-
+# the next can be a callable as well, e.g.: lambda t: t.get('complex').get('structure').get('username')
+c.GenericOAuthenticator.username_key = 'preferred_username'
+c.GenericOAuthenticator.login_service = 'HustleHub'
+# The next settings are responsible for enabling authorization
+# the next can be a callable as well, e.g.: lambda t: t.get('complex').get('structure').get('roles')
+c.GenericOAuthenticator.claim_groups_key = 'roles'
+# users with `staff` role will be allowed
+c.GenericOAuthenticator.allowed_groups = ['user']
+# users with `administrator` role will be marked as admin
+c.GenericOAuthenticator.admin_groups = ['admin']
+c.GenericOAuthenticator.scope = ['openid', 'profile', 'roles']
 
 # Allowed admins
 admin = os.environ.get("JUPYTERHUB_ADMIN")
