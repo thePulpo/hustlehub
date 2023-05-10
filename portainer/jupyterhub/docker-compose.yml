@@ -7,7 +7,7 @@ version: "3"
 services:
   hub:
     build:
-      context: https://github.com/thePulpo/hustlehub.git#templates:portainer/jupyterhub
+      context: .
       dockerfile: Dockerfile
       args:
         JUPYTERHUB_VERSION: latest
