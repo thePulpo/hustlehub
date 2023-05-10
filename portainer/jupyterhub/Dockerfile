@@ -10,8 +10,8 @@ FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
 
 # Install dockerspawner, nativeauthenticator
 RUN python3 -m pip install --no-cache-dir \
-    dockerspawner
-#    oauthenticator
+    dockerspawner \
+    oauthenticator
 #    jupyterhub-nativeauthenticator
 
 #newly added
