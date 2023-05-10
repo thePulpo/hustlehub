@@ -79,6 +79,7 @@ c.Application.log_level = 'DEBUG'
 c.JupyterHub.authenticator_class = GenericOAuthenticator
 c.GenericOAuthenticator.client_id = 'jupyterhub'
 c.GenericOAuthenticator.client_secret = '810cbb54-a33c-4ec5-b24c-ce61c06d0070'
+c.GenericOAuthenticator.authorize_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/auth'
 c.GenericOAuthenticator.token_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/token'
 c.GenericOAuthenticator.userdata_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/userinfo'
 c.GenericOAuthenticator.userdata_params = {'state': 'state'}
