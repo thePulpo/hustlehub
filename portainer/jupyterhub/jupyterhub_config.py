@@ -82,7 +82,7 @@ c.GenericOAuthenticator.client_secret = '810cbb54-a33c-4ec5-b24c-ce61c06d0070'
 c.GenericOAuthenticator.authorize_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/auth'
 c.GenericOAuthenticator.token_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/token'
 c.GenericOAuthenticator.userdata_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/userinfo'
-c.GenericOAuthenticator.logout_redirect_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/logout?redirect=http://jupyterhub:8000/hub/login'
+c.GenericOAuthenticator.logout_redirect_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/logout?redirect_uri=http://jupyterhub:8000/hub/login'
 c.GenericOAuthenticator.userdata_params = {'state': 'state'}
 # the next can be a callable as well, e.g.: lambda t: t.get('complex').get('structure').get('username')
 c.GenericOAuthenticator.username_key = 'preferred_username'
