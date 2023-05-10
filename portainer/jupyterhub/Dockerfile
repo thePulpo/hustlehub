@@ -16,7 +16,8 @@ RUN python3 -m pip install --no-cache-dir \
 
 #newly added
 #CMD mount home/jovyan/nextcloud &&
-CMD jupyterhub -f jupyterhub_config.py
+COPY jupyterhub_config.py /srv/jupyterhub
+CMD jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
 
 #CMD ["mount", "home/jovyan/nextcloud"]
 #OG CMD ["jupyterhub", "-f", "/srv/jupyterhub/jupyterhub_config.py"]
