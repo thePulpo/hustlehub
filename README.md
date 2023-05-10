@@ -39,3 +39,8 @@ https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
 
 
 ## Connect to Keycloak (OpenID)
+
+https://github.com/jupyterhub/oauthenticator/tree/main/examples/generic
+https://oauthenticator.readthedocs.io/en/latest/reference/api/gen/oauthenticator.generic.html
+https://z2jh.jupyter.org/en/stable/administrator/authentication.html
+
