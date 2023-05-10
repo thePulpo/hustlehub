@@ -9,15 +9,15 @@ FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
 #RUN #chmod +x /tmp/nextcloud_mount.sh
 
 # Install dockerspawner, nativeauthenticator
-RUN python3 -m pip install --no-cache-dir \
+RUN --no-cache python3 -m pip install --no-cache-dir \
     dockerspawner \
     oauthenticator
 #    jupyterhub-nativeauthenticator
 
 #newly added
 #CMD mount home/jovyan/nextcloud &&
-COPY jupyterhub_config.py /srv/jupyterhub/
-CMD jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
+COPY --no-cache jupyterhub_config.py /srv/jupyterhub/
+CMD --no-cache jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
 
 #CMD ["mount", "home/jovyan/nextcloud"]
 #OG CMD ["jupyterhub", "-f", "/srv/jupyterhub/jupyterhub_config.py"]
