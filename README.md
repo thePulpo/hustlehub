@@ -36,7 +36,8 @@ https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
 
 # Jupyterhub
 
-
+#dockerspawner
+https://github.com/jupyterhub/dockerspawner
 
 ## Connect to Keycloak (OpenID)
 

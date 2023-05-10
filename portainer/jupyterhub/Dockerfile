@@ -1,5 +1,9 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
+
+# Remove cache
+ARG CACHEBUST=1
+
 ARG JUPYTERHUB_VERSION
 FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
 
@@ -8,8 +12,6 @@ FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
 #COPY nextcloud_mount.sh /tmp/
 #RUN #chmod +x /tmp/nextcloud_mount.sh
 
-# Remove cache
-ARG CACHEBUST=1
 
 # Install dockerspawner, nativeauthenticator
 RUN python3 -m pip install --no-cache-dir \
