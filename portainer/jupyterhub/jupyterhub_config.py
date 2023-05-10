@@ -60,6 +60,18 @@ c.JupyterHub.db_url = "sqlite:////data/jupyterhub.sqlite"
 # Allow anyone to sign-up without approval
 # c.NativeAuthenticator.open_signup = True
 
+c.JupyterHub.authenticator_class = 'oauthenticator.generic.GenericOAuthenticator'
+c.GenericOAuthenticator.client_id = 'jupyterhub'
+c.GenericOAuthenticator.client_secret = '810cbb54-a33c-4ec5-b24c-ce61c06d0070'
+c.GenericOAuthenticator.oauth_callback_url = 'https://your-jupyterhub-domain/hub/oauth_callback'
+c.GenericOAuthenticator.authorize_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/auth'
+c.GenericOAuthenticator.token_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/token'
+c.GenericOAuthenticator.userdata_url = 'http://keycloak:8080/auth/realms/user/protocol/openid-connect/userinfo'
+c.GenericOAuthenticator.login_service = 'keycloak'
+c.GenericOAuthenticator.username_key = 'preferred_username'
+c.GenericOAuthenticator.userdata_params = {'state': 'state'}
+
+
 # Allowed admins
 admin = os.environ.get("JUPYTERHUB_ADMIN")
 if admin:

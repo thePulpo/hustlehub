@@ -11,7 +11,8 @@ RUN #chmod +x /tmp/nextcloud_mount.sh
 # Install dockerspawner, nativeauthenticator
 RUN python3 -m pip install --no-cache-dir \
     dockerspawner \
-    jupyterhub-nativeauthenticator
+    oauthenticator
+#    jupyterhub-nativeauthenticator
 
 #newly added
 #CMD mount home/jovyan/nextcloud &&
