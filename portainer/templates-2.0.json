@@ -206,7 +206,7 @@
     {
       "type": 3,
       "title": "JupyterHub",
-      "description": "Multi-user Jupyter Notebook server",
+      "description": "[May need to copy as custom!] Multi-user Jupyter Notebook server",
       "repository": {
         "url": "https://github.com/thePulpo/hustlehub",
         "stackfile": "portainer/jupyterhub/docker-compose.yml"
