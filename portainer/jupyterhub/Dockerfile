@@ -6,12 +6,12 @@ FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
 # try this!
 # Copy Nextcloud mount script to a temporary directory
 #COPY nextcloud_mount.sh /tmp/
-RUN #chmod +x /tmp/nextcloud_mount.sh
+#RUN #chmod +x /tmp/nextcloud_mount.sh
 
 # Install dockerspawner, nativeauthenticator
 RUN python3 -m pip install --no-cache-dir \
     dockerspawner \
-    oauthenticator
+#    oauthenticator
 #    jupyterhub-nativeauthenticator
 
 #newly added
