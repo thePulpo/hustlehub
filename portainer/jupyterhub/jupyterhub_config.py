@@ -72,7 +72,7 @@ c.JupyterHub.db_url = "sqlite:////data/jupyterhub.sqlite"
 # c.GenericOAuthenticator.userdata_params = {'state': 'state'}
 
 
-from oauthenticator.generic import GenericOAuthenticator
+from .oauth2 import OAuthenticator
 
 c.Application.log_level = 'DEBUG'
 
