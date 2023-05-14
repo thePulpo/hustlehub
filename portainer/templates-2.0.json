@@ -224,7 +224,7 @@
     },
     {
       "type": 1,
-      "title": "Cloudflare Tunnel",
+      "title": "[ALPHA]Cloudflare Tunnel",
       "description": "Securely expose their locally hosted web servers",
       "image": "cloudflare/cloudflared:latest",
       "administrators-only": null,
@@ -244,22 +244,7 @@
       ],
       "network": null,
       "volumes": [],
-      "ports": [
-        "53:53/tcp",
-        "53:53/udp",
-        "67:67/udp",
-        "6868:68/udp",
-        "80:80/tcp",
-        "443:443/tcp",
-        "443:443/udp",
-        "3000:3000/tcp",
-        "853:853/tcp",
-        "784:784/udp",
-        "853:853/udp",
-        "8853:8853/udp",
-        "5443:5443/tcp",
-        "5443:5443/udp"
-      ],
+      "ports": [],
       "labels": [],
       "privileged": null,
       "interactive": null,
@@ -274,7 +259,7 @@
     },
     {
       "type": 3,
-      "title": "Cloudflare Tunnel",
+      "title": "[BETA]Cloudflare Tunnel",
       "description": "[May need to copy as custom!]",
       "repository": {
         "url": "https://github.com/thePulpo/hustlehub",
@@ -298,6 +283,25 @@
       "categories": [
         "docker",
         "cloudflare"
+      ]
+    },
+    {
+      "type": 3,
+      "title": "[ALPHA]Nextcloud All-In-One",
+      "description": "Secure collaborative cloud storage platform",
+      "repository": {
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/docker-compose/nextcloud_aio.yml"
+      },
+      "administrators-only": null,
+      "name": "nextcloud_aio",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
       ]
     },
     {
