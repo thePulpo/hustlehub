@@ -278,7 +278,7 @@
       "description": "[May need to copy as custom!]",
       "repository": {
         "url": "https://github.com/thePulpo/hustlehub",
-        "stackfile": "portainer/docker-compose/cloudflared"
+        "stackfile": "portainer/docker-compose/cloudflared.yml"
       },
       "administrators-only": null,
       "name": "cloudflared",
