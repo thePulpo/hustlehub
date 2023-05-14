@@ -228,8 +228,8 @@
       "description": "Securely expose their locally hosted web servers",
       "image": "cloudflare/cloudflared:latest",
       "administrators-only": null,
-      "name": "adguard",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/55/Bitwarden_Logo_2018.png",
+      "name": "cloudflared",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png",
       "registry": null,
       "command": "tunnel --no-autoupdate run --token ${TOKEN}",
       "env": [
@@ -270,6 +270,34 @@
       "categories": [
         "docker",
         "open-source"
+      ]
+    },
+    {
+      "type": 3,
+      "title": "Cloudflare Tunnel",
+      "description": "[May need to copy as custom!]",
+      "repository": {
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/docker-compose/cloudflared"
+      },
+      "administrators-only": null,
+      "name": "cloudflared",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png",
+      "env": [
+        {
+          "name": "TOKEN",
+          "label": "TOKEN",
+          "description": "Cloudflare Tunnel Access Token",
+          "default": null,
+          "preset": null,
+          "select": null
+        }
+      ],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "cloudflare"
       ]
     },
     {
