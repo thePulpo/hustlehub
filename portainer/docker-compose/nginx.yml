@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    links:
+      - php
+    volumes:
+#      - /var/www:/usr/share/nginx/html:ro
+      - /var/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+
+  php:
+    image: php:8.1-fpm-alpine
+    container_name: php
+#    expose:
+#      - "9000"
+    volumes:
+      - /var/www/html:/var/www/html
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - /data:/var/lib/mysql

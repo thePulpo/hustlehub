@@ -305,6 +305,25 @@
       ]
     },
     {
+      "type": 3,
+      "title": "[ALPHA]PHP Webserver",
+      "description": "Webserver using PHP-fpm and NGINX",
+      "repository": {
+        "url": "https://github.com/thePulpo/hustlehub",
+        "stackfile": "portainer/docker-compose/nginx.yml"
+      },
+      "administrators-only": null,
+      "name": "nginx",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg?uselang=de",
+      "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
+    },
+    {
       "type": 1,
       "title": "Bitwarden",
       "description": "Password manager solution",
