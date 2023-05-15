@@ -260,7 +260,7 @@
     {
       "type": 3,
       "title": "[BETA]Cloudflare Tunnel",
-      "description": "[May need to copy as custom!]",
+      "description": "Secure, proxied network connections",
       "repository": {
         "url": "https://github.com/thePulpo/hustlehub",
         "stackfile": "portainer/docker-compose/cloudflared.yml"
@@ -316,6 +316,49 @@
       "name": "nginx",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg?uselang=de",
       "env": [],
+      "note": null,
+      "platform": "linux",
+      "categories": [
+        "docker",
+        "open-source"
+      ]
+    },
+    {
+      "type": 1,
+      "title": "[ALPHA]SFTP",
+      "description": "Secure file transfer over SSH",
+      "image": "atmoz/sftp",
+      "administrators-only": null,
+      "name": "sftp",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Unofficial_SSH_Logo.svg",
+      "registry": null,
+      "command": null,
+      "env": [
+        {
+          "name": "SFTP_USERS",
+          "label": "SFTP_USERS",
+          "description": "It is set to define the SFTP user",
+          "default": "user:pass[:e][:uid[:gid[:dir1[,dir2]...]]] ...",
+          "preset": null,
+          "select": null
+        }
+      ],
+      "network": null,
+      "volumes": [
+        {
+          "container": "/var/www/html",
+          "bind": "/var/www/html",
+          "readonly": false
+        }
+      ],
+      "ports": [
+        "22:22"
+      ],
+      "labels": [],
+      "privileged": null,
+      "interactive": null,
+      "restart_policy": "always",
+      "hostname": null,
       "note": null,
       "platform": "linux",
       "categories": [
