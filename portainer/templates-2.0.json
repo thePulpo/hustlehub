@@ -338,7 +338,7 @@
           "name": "SFTP_USERS",
           "label": "SFTP_USERS",
           "description": "It is set to define the SFTP user",
-          "default": "user:pass[:e][:uid[:gid[:dir1[,dir2]...]]] ...",
+          "default": "web:web:::www/html",
           "preset": null,
           "select": null
         }
@@ -346,7 +346,7 @@
       "network": null,
       "volumes": [
         {
-          "container": "/var/www/html",
+          "container": "/home/web/www/html",
           "bind": "/var/www/html",
           "readonly": false
         }
