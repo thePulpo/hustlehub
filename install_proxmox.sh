@@ -29,7 +29,9 @@ mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enter
 #sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valdocker_template_id sub)/vodocker_template_id\(\{ \/\/\1/g" /usr/share/javascript/proxmox-wdocker_template_idget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
 apt-get update -y && apt-get upgrade -y && apt-get autoremove -y
 
-apt-get dist-upgrade
+apt-get dist-upgrade -y
+
+apt-get install git
 
 #-------------------------------------------------------------------------------
 
