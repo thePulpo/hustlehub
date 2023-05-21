@@ -34,6 +34,20 @@ http://nextcloud:8080/login?clear=1
 
 https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
 
+# Nextcloud AIO
+
+use docker compose 
+open ports for talk
+Clear WOPI in Office Settings (better solution?)
+
+## Set up reverse proxy
+
+http://nextcoud:11000 no ssl (remember websocket (+block exploits))
+
+## Connect to Keycloak (OpenID)
+
+https://janikvonrotz.ch/2020/10/20/openid-connect-with-nextcloud-and-keycloak/
+
 # Jupyterhub
 
 #dockerspawner
